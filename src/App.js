@@ -27,12 +27,6 @@ function App() {
     });
   }
 
-  const removeMusic = (idToRemove) => {
-    const newData = data.filter((musicItem) => musicItem.id !== idToRemove);
-    setMusicTool(0);
-    data.splice(0, data.length, ...newData);
-  };
-
   return (
     <div>
       <div className='container'>
@@ -46,7 +40,6 @@ function App() {
       </div>
       <div className="btn container">
         <button onClick={previosMusicTool}>Previos</button>
-        <button onClick={() => removeMusic(id)}>Remove</button>
         <button onClick={nextMusicTool}>Next</button>
       </div>
     </div>
